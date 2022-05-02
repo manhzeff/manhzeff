@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+	const int
+		basePrice = 50000,
+		BEDROOM = 17000,
+		BATHROOM = 12500,
+		CAR = 6000;
+	int bedroom, bathroom, car, price;
+	int check = 1;
+		while (check == 1) {
+			printf("bedroom = ");
+			scanf("%d", &bedroom);
+			if (bedroom == 0) {
+				check = 0;
+			}
+			else {
+				printf("bathroom = ");
+				scanf("%d", &bathroom);
+				if (bathroom == 0) {
+					check = 0;
+				}
+				else {
+					printf("car = ");
+					scanf("%d", &car);
+					if (car == 0) {
+						check = 0;
+					}
+					else {
+						price = basePrice + bedroom * BEDROOM + bathroom * BATHROOM + car * CAR;
+						printf("price = %d \n", price);
+					}
+				}
+			}
+		}
+
+}
